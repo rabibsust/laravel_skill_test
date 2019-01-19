@@ -32,7 +32,7 @@
                                 <th>Price per item</th>
                                 <th>Total value number</th>
                                 <th>Datetime submitted</th>
-                                {{--<th>Action</th>--}}
+                                <th>Action</th>
                             </tr></thead>
                             <tbody id="product_data_list"></tbody>
                         </table>
@@ -93,11 +93,18 @@
                 {
                     row = row+"<td class='prd'>"+dobj+"</td>";
                 });
-                //row = row+"<td><a href='#' class='btn btn-primary'>Edit</a></td></tr>";
+                row = row+"<td><a href='#' class='btn btn-primary' id='edit_row'>Edit</a></td></tr>";
                 row = row + "</tr>";
                 $("#product_data_list").append($(row));
             });
             $("#total_sum").append("<i>"+data[0]+"</i>");
         }
+
+
+        $(document).on('click','a#edit_row', function(e){
+            e.preventDefault();
+
+        });
+
     </script>
 @endsection
