@@ -13,7 +13,9 @@
         <div class="card-header"><h1 align="center">Laravel Skill Test</h1></div>
         <div class="card-body">
             <div class="row">
-                @yield('content')
+                <div class="col-md-8">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>

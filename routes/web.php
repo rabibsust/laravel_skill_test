@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'ProductController@index');
+Route::get('/get', 'ProductController@get');
+Route::post('/save', 'ProductController@save');
